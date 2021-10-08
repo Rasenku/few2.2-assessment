@@ -1,0 +1,8 @@
+@use "sass:math";
+.swatches {
+  @for $i from 0 to 100 {
+    .color-#{$i} {
+      background-color: rgb(math.div(255, $i), $i*2.5, $i*2.5)
+    }
+   }
+}

@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	color: #FF00FF;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,121,1) 30%, rgba(0,212,255,1) 100%);
+	margin: 0;
+	padding: 0;
+	margin-bottom: -20px;
+	}
+
+h1 {
+	font-size: 40px;
+	font : "Montserrat", monospace;
+  align-self : end;
+}
+
+h2 {
+	font-size: 35px;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: 15px;
+	font-weight: 400;
+}
+h6 {
+	font-size: 10px;
+	font-weight: 400;
+}
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/journal-webfont.woff2') format('woff2'),
+         url('fonts/journal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
+         url('fonts/veteran_typewriter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font  : 1.3rem sans-serif;
+  padding : 0.5em;
+  margin  : 0;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,121,1) 30%, rgba(0,212,255,1) 100%);
+}
+
+form {
+  position : relative;
+  width  : 500px;
+  height : 500px;
+  margin : 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,121,1) 30%, rgba(0,212,255,1) 100%);
+
+  /* we create our grid */
+  display  : grid;
+  grid-gap : 20px;
+  grid-template-columns : repeat(2, 1fr);
+  grid-template-rows    : 10em 1em 1em 1em;
+}
+
+#message {
+   grid-row: 1 / 5;
+}
+
+#from, #reply {
+   display: flex;
+}
+
+Label {
+  font : .8em "Montserrat", sans-serif;
+}
+
+input, textarea {
+  font    : 1.4em/1.5em "handwriting", sans-serif;
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 80%;
+	background: rgb(139,5,131);
+  background: linear-gradient(90deg, rgba(139,5,131,1) 0%, rgba(121,9,121,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+
+
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+	color:white;
+  border-radius: 5px;
+}
+
+textarea {
+  display : block;
+
+  padding : 1px;
+  margin  : 5px 0 0 -10px;
+  width   : 70%;
+  height  : 70%;
+
+  border-right: 1px solid;
+
+  /* resize  : none; */
+  overflow: auto;
+	transition: 300ms;
+}
+
+
+button {
+  padding      : 5px;
+  font         : bold .6em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+  cursor       : pointer;
+  transform    : rotate(-1.5deg);
+	transition: 300ms;
+}
+
+button:after {
+  content      : " >>>";
+}
+
+button:hover,
+button:focus {
+  outline     : none;
+	background: rgb(139,5,131);
+  background: linear-gradient(90deg, rgba(139,5,131,1) 0%, rgba(121,9,121,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+button {
+  padding      : 10px;
+  font         : bold .6em sans-serif;
+  border       : 5px solid #333;
+  border-radius: 5px;
+  background   : none;
+  cursor       : pointer;
+  transform    : rotate(-1.5deg);
+	transition: 300ms;
+}
+
+button:after {
+  content      : " >>>";
+}
+
+button:hover,
+button:focus {
+  outline     : none;
+	background: rgb(139,5,131);
+  background: linear-gradient(90deg, rgba(139,5,131,1) 0%, rgba(121,9,121,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+
+.select {
+  position: relative;
+
+  display : inline-block;
+}
+
+select .active,
+.select:focus {
+  outline: none;
+
+  box-shadow: 0 0 3px 1px #227755;
+}
+
+
+.select .optList {
+  position : absolute;
+  top      : 100%;
+  left     : 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size   : 0.625em;
+  font-family : Verdana, Arial, sans-serif;
+
+  box-sizing : border-box;
+
+  padding : .1em 2.5em .2em .5em;
+  width   : 10em; /* 100px */
+
+  border        : .2em solid #000;
+  border-radius : .4em;
+  box-shadow    : 0 .1em .2em rgba(0,0,0,.45);
+
+  background : #F0F0F0;
+  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  width    : 100%;
+  overflow : hidden;
+  white-space : nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+
+.select:after {
+  content : "▼";
+  position: absolute;
+  z-index : 1;
+  top     : 0;
+  right   : 0;
+
+  box-sizing : border-box;
+
+  height  : 100%;
+  width   : 2em;
+  padding-top : .1em;
+
+  border-left  : .2em solid #000;
+  border-radius: 0 .1em .1em 0;
+
+  background-color : #000;
+  color : #FFF;
+  text-align : center;
+}
+
+
+.select .optList {
+  z-index : 2;
+
+  list-style: none;
+  margin : 0;
+  padding: 0;
+
+  box-sizing : border-box;
+
+  min-width : 100%;
+
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  border: .2em solid #000;
+  border-top-width : .1em;
+  border-radius: 0 0 .4em .4em;
+
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+  background: #f0f0f0;
+}
+
+.select .option {
+  padding: .2em .3em; /* 2px 3px */
+}
+
+.select .highlight {
+  background: #000;
+  color: #FFFFFF;
+}
+
+.widget select,
+.no-widget .select {
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+strong {
+	font-weight: bolder;
+}
+
+.navbar {
+  background: linear-gradient(0deg, #3ae374 0%, #7d5fff 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: auto 10em;
+}
+
+em {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+}
+
+a {
+  font-style: italic;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.swatches {
+  --color-sample-0: hsl(0, 100%, 50%);
+  --color-sample-1: hsl(3.6, 100%, 50%);
+  --color-sample-2: hsl(7.2, 100%, 50%);
+  --color-sample-3: hsl(10.8, 100%, 50%);
+  --color-sample-4: hsl(14.4, 100%, 50%);
+  --color-sample-5: hsl(18, 100%, 50%);
+  --color-sample-6: hsl(21.6, 100%, 50%);
+  --color-sample-7: hsl(25.2, 100%, 50%);
+  --color-sample-8: hsl(28.8, 100%, 50%);
+  --color-sample-9: hsl(32.4, 100%, 50%);
+  --color-sample-10: hsl(36, 100%, 50%);
+  --color-sample-11: hsl(39.6, 100%, 50%);
+  --color-sample-12: hsl(43.2, 100%, 50%);
+  --color-sample-13: hsl(46.8, 100%, 50%);
+  --color-sample-14: hsl(50.4, 100%, 50%);
+  --color-sample-15: hsl(54, 100%, 50%);
+  --color-sample-16: hsl(57.6, 100%, 50%);
+  --color-sample-17: hsl(61.2, 100%, 50%);
+  --color-sample-18: hsl(64.8, 100%, 50%);
+  --color-sample-19: hsl(68.4, 100%, 50%);
+  --color-sample-20: hsl(72, 100%, 50%);
+  --color-sample-21: hsl(75.6, 100%, 50%);
+  --color-sample-22: hsl(79.2, 100%, 50%);
+  --color-sample-23: hsl(82.8, 100%, 50%);
+  --color-sample-24: hsl(86.4, 100%, 50%);
+  --color-sample-25: hsl(90, 100%, 50%);
+  --color-sample-26: hsl(93.6, 100%, 50%);
+  --color-sample-27: hsl(97.2, 100%, 50%);
+  --color-sample-28: hsl(100.8, 100%, 50%);
+  --color-sample-29: hsl(104.4, 100%, 50%);
+  --color-sample-30: hsl(108, 100%, 50%);
+  --color-sample-31: hsl(111.6, 100%, 50%);
+  --color-sample-32: hsl(115.2, 100%, 50%);
+  --color-sample-33: hsl(118.8, 100%, 50%);
+  --color-sample-34: hsl(122.4, 100%, 50%);
+  --color-sample-35: hsl(126, 100%, 50%);
+  --color-sample-36: hsl(129.6, 100%, 50%);
+  --color-sample-37: hsl(133.2, 100%, 50%);
+  --color-sample-38: hsl(136.8, 100%, 50%);
+  --color-sample-39: hsl(140.4, 100%, 50%);
+  --color-sample-40: hsl(144, 100%, 50%);
+  --color-sample-41: hsl(147.6, 100%, 50%);
+  --color-sample-42: hsl(151.2, 100%, 50%);
+  --color-sample-43: hsl(154.8, 100%, 50%);
+  --color-sample-44: hsl(158.4, 100%, 50%);
+  --color-sample-45: hsl(162, 100%, 50%);
+  --color-sample-46: hsl(165.6, 100%, 50%);
+  --color-sample-47: hsl(169.2, 100%, 50%);
+  --color-sample-48: hsl(172.8, 100%, 50%);
+  --color-sample-49: hsl(176.4, 100%, 50%);
+  --color-sample-50: hsl(180, 100%, 50%);
+  --color-sample-51: hsl(183.6, 100%, 50%);
+  --color-sample-52: hsl(187.2, 100%, 50%);
+  --color-sample-53: hsl(190.8, 100%, 50%);
+  --color-sample-54: hsl(194.4, 100%, 50%);
+  --color-sample-55: hsl(198, 100%, 50%);
+  --color-sample-56: hsl(201.6, 100%, 50%);
+  --color-sample-57: hsl(205.2, 100%, 50%);
+  --color-sample-58: hsl(208.8, 100%, 50%);
+  --color-sample-59: hsl(212.4, 100%, 50%);
+  --color-sample-60: hsl(216, 100%, 50%);
+  --color-sample-61: hsl(219.6, 100%, 50%);
+  --color-sample-62: hsl(223.2, 100%, 50%);
+  --color-sample-63: hsl(226.8, 100%, 50%);
+  --color-sample-64: hsl(230.4, 100%, 50%);
+  --color-sample-65: hsl(234, 100%, 50%);
+  --color-sample-66: hsl(237.6, 100%, 50%);
+  --color-sample-67: hsl(241.2, 100%, 50%);
+  --color-sample-68: hsl(244.8, 100%, 50%);
+  --color-sample-69: hsl(248.4, 100%, 50%);
+  --color-sample-70: hsl(252, 100%, 50%);
+  --color-sample-71: hsl(255.6, 100%, 50%);
+  --color-sample-72: hsl(259.2, 100%, 50%);
+  --color-sample-73: hsl(262.8, 100%, 50%);
+  --color-sample-74: hsl(266.4, 100%, 50%);
+  --color-sample-75: hsl(270, 100%, 50%);
+  --color-sample-76: hsl(273.6, 100%, 50%);
+  --color-sample-77: hsl(277.2, 100%, 50%);
+  --color-sample-78: hsl(280.8, 100%, 50%);
+  --color-sample-79: hsl(284.4, 100%, 50%);
+  --color-sample-80: hsl(288, 100%, 50%);
+  --color-sample-81: hsl(291.6, 100%, 50%);
+  --color-sample-82: hsl(295.2, 100%, 50%);
+  --color-sample-83: hsl(298.8, 100%, 50%);
+  --color-sample-84: hsl(302.4, 100%, 50%);
+  --color-sample-85: hsl(306, 100%, 50%);
+  --color-sample-86: hsl(309.6, 100%, 50%);
+  --color-sample-87: hsl(313.2, 100%, 50%);
+  --color-sample-88: hsl(316.8, 100%, 50%);
+  --color-sample-89: hsl(320.4, 100%, 50%);
+  --color-sample-90: hsl(324, 100%, 50%);
+  --color-sample-91: hsl(327.6, 100%, 50%);
+  --color-sample-92: hsl(331.2, 100%, 50%);
+  --color-sample-93: hsl(334.8, 100%, 50%);
+  --color-sample-94: hsl(338.4, 100%, 50%);
+  --color-sample-95: hsl(342, 100%, 50%);
+  --color-sample-96: hsl(345.6, 100%, 50%);
+  --color-sample-97: hsl(349.2, 100%, 50%);
+  --color-sample-98: hsl(352.8, 100%, 50%);
+  --color-sample-99: hsl(356.4, 100%, 50%);
+}
